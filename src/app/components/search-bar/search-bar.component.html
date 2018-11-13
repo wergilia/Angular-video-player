@@ -1,5 +1,6 @@
 <div id="search-bar-component">
-  <h4>Video Search</h4>
-  <input #searchBox id="search-box" (input)="search(searchBox.value)" />
-
+  <form (ngSubmit)="submitForm(myForm)" #myForm="ngForm">
+    <input type="text" placeholder="Search..." name="searchBar" [(ngModel)]="search" />
+    <button class="button button1" type="submit">Watch!</button>
+  </form>
 </div>
